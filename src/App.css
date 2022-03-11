@@ -1,38 +1,8 @@
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
+  /* overflow-x: hidden; */
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  background-image: url("https://lh3.googleusercontent.com/yMNLfFT-fAS-5UKMwCEkg7ybQd04Bwms3J9QjTxxtO6QvCW5GTbly_P8sBFWYTc1lKS13v9D5rInLmCvuIbniG2CRFmPOxt2pjCk4J8YgC_mdXR-0g2aJeZ-SOxCB5wQ8iG1HEpeao-PK3bUVteQvQ_OBeKqQK4VnWrPA_SXw-8O2yae5kNgPJHvcKCKx2QnKXPl4Nuigmu34_qJzm7qvr1X9HZCyeZkGBL21qbGrIMqQV2oQmjTgzKitZqEhKhAUtpDP6oaPenVIe559XQFXo1iRGwVDh4w-52UXk_niwpYm94T_swEgMocherTRsVDjesH0j5jM17Q3mVa2fpS6qfF13bZFKxLc6WXqUgQ1F_TkeiX4cs-Fqo1jua-LkgEgCzqkcrA48bkpoNQsnleBYT8m-sHa3zuuqjf-IrKgtsSrNbsOpK44IFWAZmFMN28lLgrMdNK9ex8zRmVf6-0Qd5o0KNvegx7yAlqTByzAtT8c5TnEdgAq6WcuyE8I2gFZMKfrgwPANfBYgyB1pyHtIriRPoXRp6qtGB4OWkrmM-5N1AQ1z8qrU7ddqS0Kpca2Vz7F1ScUDtroFZ2oI8OZpi7XSVQd_LqKfIZpU52rxBSDnEmlrdDiFtOaDZgkwu5uWYiTKRTMR5lX-jSLq2yuSP5goRh8CQeAeQtvzqdMSHOk9_Fes8baYk1qCQSqjFAnFcOrxxsU3ZPrIqgo4W8-Cs=w328-h233-no?authuser=0");
+  background-size: 100%;
 }
