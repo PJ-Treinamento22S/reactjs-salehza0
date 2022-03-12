@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const HeaderWrapper = styled.div`
   background-color: white;
-  opacity: 0.5;
+  opacity: 0.6;
   padding: 8px;
   height: 64px;
   width: 100%;

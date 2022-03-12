@@ -2,18 +2,18 @@ import React from "react";
 
 import Piu from "../../components/Piu";
 import UserInfo from "../../components/UserInfo";
-import image from "../../assets/profilephoyo.jpg";
+import Image from "../../assets/profilephoto.jpg";
 
 import * as S from "./styles";
 
 const FeedTemplate: React.FC = () => {
   return (
-    <div>
+    <S.ContentWrapper>
       <UserInfo />
-      {/* <S.Container>
-        <Piu image={image} username="salehza0" content="Hello World"></Piu>
-      </S.Container> */}
-    </div>
+      <S.Container>
+        <Piu image={Image} username="salehza0" content="Hello World"></Piu>
+      </S.Container>
+    </S.ContentWrapper>
   );
 };
 

@@ -11,7 +11,7 @@ export const Container = styled.div`
   width: 480px;
   height: fit-content;
   background-color: white;
-  opacity: 0, 8;
+  opacity: 0.9;
   border: 2px solid black;
   border-radius: 32px;
 `;
