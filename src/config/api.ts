@@ -1,5 +1,5 @@
 import getApi from "./axios";
 
-const api = getApi()
+const api = getApi();
 
-export default api
+export default api;

@@ -49,7 +49,7 @@ export const BtnWrapper = styled.div`
 `;
 
 export const PiuButton = styled.button`
-  display:flex;
+  display: flex;
   border: 0;
   width: fit-content;
   height: fit-content;
@@ -62,6 +62,6 @@ export const PiuButtonIcon = styled.img`
 `;
 
 export const likesNumber = styled.p`
-  font-family:'Outfit';
+  font-family: "Outfit";
   font-size: medium;
-`
+`;
