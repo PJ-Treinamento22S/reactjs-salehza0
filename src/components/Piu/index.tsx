@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useState} from "react";
 
 import highlight from "../../assets/home.svg";
 import like from "../../assets/like.svg";
@@ -12,6 +12,7 @@ interface PiuProps {
 }
 
 const Piu: React.FC<PiuProps> = (props) => {
+  const [contador,setContador]= useState(0)
   return (
     <div>
       <S.Container>
@@ -24,8 +25,11 @@ const Piu: React.FC<PiuProps> = (props) => {
           <S.PiuButton>
             <S.PiuButtonIcon src={highlight} />
           </S.PiuButton>
-          <S.PiuButton>
+          <S.PiuButton onClick={()=>{
+              setContador(contador+1)
+          }}>
             <S.PiuButtonIcon src={like} />
+            <S.likesNumber>{contador}</S.likesNumber>
           </S.PiuButton>
         </S.BtnWrapper>
       </S.Container>

@@ -1,8 +1,8 @@
 import React from "react";
-import logo from "./logo.svg";
 import "./App.css";
 import HeaderTemplate from "./templates/Header";
 import FeedTemplate from "./templates/Feed";
+import api from "./config/api";
 
 function App() {
   return (
@@ -12,5 +12,5 @@ function App() {
     </div>
   );
 }
-
+console.log(api);
 export default App;
