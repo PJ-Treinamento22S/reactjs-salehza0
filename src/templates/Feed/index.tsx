@@ -28,6 +28,8 @@ const FeedTemplate: React.FC = () => {
             image={piu.user.photo}
             username={piu.user.username}
             content={piu.text}
+            user={false}
+            likes={piu.likes.length}
           />
         ))}
       </S.Container>

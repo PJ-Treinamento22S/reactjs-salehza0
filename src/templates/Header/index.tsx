@@ -15,18 +15,18 @@ const Header: React.FC = () => {
       <S.HeaderWrapper>
         <S.HeaderH1>PiuPiuwer</S.HeaderH1>
         <S.IconsWrapper>
-          <a>
+          <S.IconButton>
             <Icon icon={home} />
-          </a>
-          <a>
+          </S.IconButton>
+          <S.IconButton>
             <Icon icon={search} />
-          </a>
-          <a>
+          </S.IconButton>
+          <S.IconButton>
             <Icon icon={noti} />
-          </a>
-          <a>
+          </S.IconButton>
+          <S.IconButton>
             <Icon icon={profile} />
-          </a>
+          </S.IconButton>
         </S.IconsWrapper>
         <S.ProfPhoto src={profPhoto}></S.ProfPhoto>
       </S.HeaderWrapper>

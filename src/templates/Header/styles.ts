@@ -34,3 +34,10 @@ export const IconsWrapper = styled.div`
   align-items: center;
   justify-content: space-between;
 `;
+
+export const IconButton = styled.button`
+  width: fit-content;
+  height: fit-content;
+  border: 0;
+  background: none;
+`;

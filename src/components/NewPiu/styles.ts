@@ -1,4 +1,13 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
+
+export const Div = styled.div`
+  display: flex;
+  flex-direction: column;
+  height: fit-content;
+  width: fit-content;
+  justify-content: center;
+  align-items: center;
+`;
 export const Container = styled.div`
   font-family: "Outfit";
   display: flex;
@@ -40,4 +49,10 @@ export const NewPiuButton = styled.button`
 export const BtnImg = styled.img`
   height: 40px;
   width: 40px;
+`;
+
+export const Counter = styled.p<{ counter: number }>`
+  ${({ counter }) => css`
+    color: ${counter === 140 ? "red" : "black"};
+  `}
 `;

@@ -8,7 +8,7 @@ const UserInfo: React.FC = () => {
   return (
     <S.UserContainer>
       <S.UserInfos>
-        <NewPiuArea placeholder="PiuPiuzer como quiser..."></NewPiuArea>
+        <NewPiuArea placeholder="PiuPiuze como quiser..."></NewPiuArea>
         <UserStats></UserStats>
         <Bio></Bio>
       </S.UserInfos>
