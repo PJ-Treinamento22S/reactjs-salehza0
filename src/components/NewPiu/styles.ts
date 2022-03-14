@@ -30,6 +30,12 @@ export const NewPiuButton = styled.button`
   border-radius: 64px;
   box-shadow: 0 0 4px 2px #555;
   margin-left: 8px;
+  :hover {
+    cursor: pointer;
+    transform: scale(1.1, 1.1);
+    -webkit-transform: scale(1.1, 1.1);
+    box-shadow: 0 0 4px 2px #555;
+  }
 `;
 export const BtnImg = styled.img`
   height: 40px;

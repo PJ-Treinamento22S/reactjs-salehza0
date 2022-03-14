@@ -54,6 +54,11 @@ export const PiuButton = styled.button`
   width: fit-content;
   height: fit-content;
   background-color: white;
+  :hover {
+    transform: scale(1.1, 1.1);
+    -webkit-transform: scale(1.1, 1.1);
+    box-shadow: 0px 0px 0px 0px;
+  }
 `;
 
 export const PiuButtonIcon = styled.img`
