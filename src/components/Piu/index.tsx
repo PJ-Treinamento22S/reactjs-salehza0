@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 import highlight from "../../assets/home.svg";
 import like from "../../assets/like.svg";
 import trash from "../../assets/trash.svg";
+import api from "../../config/api";
 
 import * as S from "./styles";
 
@@ -12,10 +13,16 @@ interface PiuProps {
   content: string;
   user: boolean;
   likes: number;
+  id: string;
 }
 
 const Piu: React.FC<PiuProps> = (props) => {
   const user = props.user;
+  async function addLike() {
+    await api.post("/pius/like", {
+      piu_id: props.id,
+    });
+  }
   if (user) {
     return (
       <div>
@@ -29,11 +36,7 @@ const Piu: React.FC<PiuProps> = (props) => {
             <S.PiuButton>
               <S.PiuButtonIcon src={highlight} />
             </S.PiuButton>
-            <S.PiuButton
-            // onClick={() => {
-
-            // }}
-            >
+            <S.PiuButton onClick={() => addLike()}>
               <S.PiuButtonIcon src={like} />
               <S.likesNumber>{props.likes}</S.likesNumber>
             </S.PiuButton>
@@ -57,11 +60,7 @@ const Piu: React.FC<PiuProps> = (props) => {
             <S.PiuButton>
               <S.PiuButtonIcon src={highlight} />
             </S.PiuButton>
-            <S.PiuButton
-            // onClick={() => {
-
-            // }}
-            >
+            <S.PiuButton onClick={() => addLike()}>
               <S.PiuButtonIcon src={like} />
               <S.likesNumber>{props.likes}</S.likesNumber>
             </S.PiuButton>

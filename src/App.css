@@ -5,4 +5,5 @@
   align-items: center;
   background-image: url("https://i.postimg.cc/mrqSH88D/background.png");
   background-size: 100%;
+  overflow: hidden;
 }

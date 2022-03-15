@@ -12,11 +12,12 @@ const FeedTemplate: React.FC = () => {
   useEffect(() => {
     async function getPius() {
       const pius = await api.get("/pius");
+      console.log(pius);
       setPiusData(pius.data);
-      console.log(piusData);
     }
+
     getPius();
-  }, []);
+  }, [piusData]);
 
   return (
     <S.ContentWrapper>
@@ -30,6 +31,7 @@ const FeedTemplate: React.FC = () => {
             content={piu.text}
             user={false}
             likes={piu.likes.length}
+            id={piu.id}
           />
         ))}
       </S.Container>
