@@ -4,7 +4,7 @@ export const TextArea = styled.textarea`
   display: flex;
   padding: 16px;
   width: 320px;
-  height: 160px;
+  height: 120px;
   border: 2px solid black;
   border-radius: 32px;
   background-color: white;

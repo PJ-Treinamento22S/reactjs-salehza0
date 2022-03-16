@@ -16,7 +16,7 @@ export const Container = styled.div`
   background-color: white;
   max-width: 400px;
   min-width: 240px;
-  height: 160px;
+  height: 120px;
   opacity: 0, 8;
   border-radius: 56px;
 `;
@@ -26,7 +26,7 @@ export const TextArea = styled.textarea`
   border: 0;
   outline: 0;
   width: 240px;
-  height: 120px;
+  height: 104px;
 `;
 export const NewPiuButton = styled.button`
   display: flex;

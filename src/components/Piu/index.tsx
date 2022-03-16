@@ -4,6 +4,7 @@ import highlight from "../../assets/home.svg";
 import like from "../../assets/like.svg";
 import trash from "../../assets/trash.svg";
 import api from "../../config/api";
+import unk from "../../assets/unk.png";
 import { GetPiusContext } from "../../templates/Feed";
 
 import * as S from "./styles";

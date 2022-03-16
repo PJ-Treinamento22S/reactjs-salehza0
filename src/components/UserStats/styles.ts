@@ -8,8 +8,8 @@ export const Wrapper = styled.div`
 `;
 export const ProfilePhoto = styled.img`
   margin-right: 16px;
-  width: 80px;
-  height: 80px;
+  width: 64px;
+  height: 64px;
   border: 2px solid black;
   border-radius: 64px;
 `;
@@ -21,7 +21,6 @@ export const StatsContainer = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: 24px;
   font-weight: bold;
 `;
 export const Username = styled.h3`
