@@ -1,6 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 
 import home from "../../assets/home.svg";
+import api from "../../config/api";
+import Piu from "../Piu";
+import { GetPiusContext } from "../../templates/Feed";
 
 import * as S from "./styles";
 interface TextAreaProp {
@@ -8,7 +11,14 @@ interface TextAreaProp {
 }
 
 const NewPiuArea: React.FC<TextAreaProp> = ({ placeholder }) => {
-  const [counter, setCounter] = useState(0);
+  const [content, setContent] = useState("");
+  const { getPius } = useContext(GetPiusContext);
+  async function postPiu() {
+    await api.post("/pius", {
+      text: content,
+    });
+    getPius();
+  }
   return (
     <S.Div>
       <S.Container>
@@ -16,9 +26,7 @@ const NewPiuArea: React.FC<TextAreaProp> = ({ placeholder }) => {
           maxLength={140}
           placeholder={placeholder}
           onChange={(e) => {
-            console.log(e.target.value.length);
-            setCounter(e.target.value.length);
-
+            setContent(e.target.value);
             if (e.target.value.length === 140) {
               e.target.style.color = "red";
               return;
@@ -27,16 +35,16 @@ const NewPiuArea: React.FC<TextAreaProp> = ({ placeholder }) => {
             e.target.innerText = "";
           }}
         ></S.TextArea>
-        <S.NewPiuButton>
+        <S.NewPiuButton onClick={() => postPiu()}>
           <S.BtnImg src={home}></S.BtnImg>
         </S.NewPiuButton>
       </S.Container>
-      {counter === 140 && (
-        <S.Counter counter={counter}>
+      {content.length === 140 && (
+        <S.Counter counter={content.length}>
           Você ultrapassou o limite de caracteres!
         </S.Counter>
       )}
-      <S.Counter counter={counter}>{counter}/140</S.Counter>
+      <S.Counter counter={content.length}>{content.length}/140</S.Counter>
     </S.Div>
   );
 };

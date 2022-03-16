@@ -2,7 +2,7 @@
 import axios from "axios";
 
 const getApi = () => {
-  const token = `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2NDcyOTM0NTIsImV4cCI6MTY0NzM3OTg1Miwic3ViIjoiOWUyMzIzZjEtMGQ0MS00ZWI1LWI4NDAtMTAzMGZiZGQ2ZTdmIn0.aZFYPFMrXcf7M4oTAJZh25lpyQHMpkPefv9d7T4lwzI`;
+  const token = `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2NDczODU3MTEsImV4cCI6MTY0NzQ3MjExMSwic3ViIjoiMDgyMmFiMTktMGNmZC00NWViLTgwNzMtNDNkNDAzYmZjMWZkIn0.FP0prtUBtldcDmQCwVoCXckFcxbW-fQUpmssGoQqOCg`;
   const api = axios.create({
     baseURL: "https://piupiuwer.polijrinternal.com",
   });

@@ -1,9 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 
 import highlight from "../../assets/home.svg";
 import like from "../../assets/like.svg";
 import trash from "../../assets/trash.svg";
 import api from "../../config/api";
+import { GetPiusContext } from "../../templates/Feed";
 
 import * as S from "./styles";
 
@@ -17,12 +18,22 @@ interface PiuProps {
 }
 
 const Piu: React.FC<PiuProps> = (props) => {
+  const { getPius } = useContext(GetPiusContext);
   const user = props.user;
   async function addLike() {
     await api.post("/pius/like", {
       piu_id: props.id,
     });
+    getPius();
   }
+
+  async function favPiu() {
+    await api.post("/pius/favorite", {
+      piu_id: props.id,
+    });
+    getPius();
+  }
+
   if (user) {
     return (
       <div>
@@ -33,7 +44,7 @@ const Piu: React.FC<PiuProps> = (props) => {
           </S.User>
           <S.PiuText>{props.content}</S.PiuText>
           <S.BtnWrapper>
-            <S.PiuButton>
+            <S.PiuButton onClick={() => favPiu()}>
               <S.PiuButtonIcon src={highlight} />
             </S.PiuButton>
             <S.PiuButton onClick={() => addLike()}>
