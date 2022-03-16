@@ -15,7 +15,7 @@ export const Container = styled.div`
   flex-direction: column;
   align-items: center;
   width: 100%;
-  max-height: 100vh;
+  max-height: 85vh;
   min-height: 50vh;
   overflow-x: hidden;
   overflow-y: scroll;

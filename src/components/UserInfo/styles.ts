@@ -9,8 +9,8 @@ export const UserContainer = styled.div`
 `;
 
 export const UserInfos = styled.div`
-  padding-top: 32px;
-  padding-bottom: 32px;
+  padding-top: 8px;
+  padding-bottom: 8px;
   border: 2px solid black;
   border-radius: 16px;
   width: 400px;
